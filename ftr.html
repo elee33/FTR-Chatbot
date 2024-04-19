@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Trading Room</title>
+  <style>
+    /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #444; /* Darker grey background */
+      color: #fff; /* White text color */
+    }
+
+    /* Chatbot container */
+    .chatbot-container {
+      max-width: 600px; /* Limit the width of the chatbot container */
+      margin: 0 auto; /* Center the chatbot container */
+      background-color: #222; /* Dark background color */
+      border-radius: 20px; /* Rounded corners */
+      padding: 20px; /* Padding inside the container */
+    }
+
+    /* Chat messages */
+    .chat-message, .user-message {
+      font-family: Arial, sans-serif; /* Use Arial font */
+      background-color: #333; /* Even darker grey background for chat messages */
+      color: white; /* Text color */
+      border-radius: 10px; /* Rounded corners for chat messages */
+      padding: 20px; /* Increased padding around chat messages */
+      margin-bottom: 20px; /* Increased spacing between chat messages */
+    }
+
+    /* User message */
+    .user-message {
+      background-color: #4a90e2; /* Blue background for user message */
+    }
+
+    /* Input box */
+    .input-box {
+      font-family: Arial, sans-serif; /* Use Arial font */
+      background-color: #fff; /* White background for input box */
+      color: #333; /* Text color */
+      border: 2px solid #ccc; /* Slightly thicker grey border */
+      border-radius: 10px; /* Rounded corners for input box */
+      padding: 15px; /* Increased padding inside input box */
+      width: calc(100% - 50px); /* Adjusted width to fit within the container */
+      margin-bottom: 20px; /* Increased spacing between input box and button */
+    }
+
+    /* Button */
+    .button {
+      font-family: Arial, sans-serif; /* Use Arial font */
+      background-color: #555; /* Dark grey background for buttons */
+      color: white; /* Text color */
+      border: 2px solid #ccc; /* Slightly thicker grey border */
+      border-radius: 10px; /* Rounded corners for buttons */
+      padding: 15px 30px; /* Increased padding inside buttons */
+      cursor: pointer; /* Show pointer cursor on hover */
+      transition: background-color 0.3s ease; /* Smooth transition on hover */
+    }
+
+    /* Hover effect on buttons */
+    .button:hover {
+      background-color: #777; /* Darker grey background on hover */
+    }
+
+    /* Down arrow style */
+    .down-arrow {
+      position: relative;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-left: 10px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #ccc; /* Grey arrow color */
+      cursor: pointer; /* Show pointer cursor on hover */
+    }
+
+    /* Dropdown menu styles */
+    .dropdown-menu {
+      display: none; /* Hide dropdown menu by default */
+      position: absolute;
+      background-color: #333; /* Dark background color for dropdown menu */
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      color: white; /* Text color */
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #555; /* Darker grey background on hover */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Fantasy Trading Room Logo -->
+<img src="https://media.licdn.com/dms/image/D560BAQEz0euygDuJAg/company-logo_200_200/0/1703624929126/fantasy_trading_room_logo?e=1721260800&v=beta&t=qMFfPMqD4GLFPpYHFupybfY9zspZT_xENsiTCoU5bNU" alt="Fantasy Trading Room Logo" style="display: block; margin: 0 auto; width: 200px;">
+
+<!-- Chatbot container -->
+<div class="chatbot-container">
+  <!-- Chat messages -->
+  <div class="chat-message">
+    Hello! How can I assist you today?
+  </div>
+
+  <!-- User message -->
+  <div class="user-message">
+    Hi! I need help with my order.
+  </div>
+
+  <!-- Dropdown menu for options -->
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="#" onclick="sendMessage('Where to start?')">Where to start?</a>
+    <a href="#" onclick="sendMessage('How does this trading work?')">How does this trading work?</a>
+    <!-- Add more options here -->
+  </div>
+
+  <!-- Down arrow to show/hide dropdown menu -->
+  <span class="down-arrow" onclick="toggleDropdownMenu()"></span>
+
+  <!-- Input box for player's action/message -->
+  <input type="text" id="action" class="input-box" placeholder="Enter your action...">
+
+  <!-- Button -->
+  <button class="button" onclick="sendAction()">Submit</button>
+</div>
+
+<script>
+  // Function to toggle dropdown menu visibility
+  function toggleDropdownMenu() {
+    var dropdownMenu = document.getElementById("dropdownMenu");
+    if (dropdownMenu.style.display === "block") {
+      dropdownMenu.style.display = "none";
+    } else {
+      dropdownMenu.style.display = "block";
+    }
+  }
+
+  // Function to send selected option as a user message
+  function sendMessage(message) {
+    var userMessageDiv = document.createElement("div");
+    userMessageDiv.className = "user-message";
+    userMessageDiv.textContent = message;
+    document.querySelector(".chatbot-container").appendChild(userMessageDiv);
+  }
+
+  // Function to handle action submission (currently placeholder)
+  function sendAction() {
+    var actionInput = document.getElementById("action").value;
+    // Placeholder action handling
+    console.log("Action submitted:", actionInput);
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
