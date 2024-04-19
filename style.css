@@ -1,0 +1,81 @@
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #444; /* Darker grey background */
+  color: #fff; /* White text color */
+}
+
+/* Chatbot container */
+.chatbot-container {
+  max-width: 600px; /* Limit the width of the chatbot container */
+  margin: 0 auto; /* Center the chatbot container */
+  background-color: #222; /* Dark background color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px; /* Padding inside the container */
+}
+
+/* Chat messages */
+.chat-message {
+  font-family: Arial, sans-serif; /* Use Arial font */
+  background-color: #333; /* Even darker grey background for chat messages */
+  color: white; /* Text color */
+  border-radius: 10px; /* Rounded corners for chat messages */
+  padding: 20px; /* Increased padding around chat messages */
+  margin-bottom: 20px; /* Increased spacing between chat messages */
+}
+
+/* User message */
+.user-message {
+  font-family: Arial, sans-serif; /* Use Arial font */
+  background-color: #4a90e2; /* Blue background for user message */
+  color: white; /* Text color */
+  border-radius: 10px; /* Rounded corners for user message */
+  padding: 20px; /* Increased padding around user message */
+  margin-bottom: 20px; /* Increased spacing between user message and chat messages */
+}
+
+/* Input box */
+.input-box {
+  font-family: Arial, sans-serif; /* Use Arial font */
+  background-color: #fff; /* White background for input box */
+  color: #333; /* Text color */
+  border: 2px solid #ccc; /* Slightly thicker grey border */
+  border-radius: 10px; /* Rounded corners for input box */
+  padding: 15px; /* Increased padding inside input box */
+  width: calc(100% - 50px); /* Adjusted width to fit within the container */
+  margin-bottom: 20px; /* Increased spacing between input box and button */
+}
+
+/* Button */
+.button {
+  font-family: Arial, sans-serif; /* Use Arial font */
+  background-color: #555; /* Dark grey background for buttons */
+  color: white; /* Text color */
+  border: 2px solid #ccc; /* Slightly thicker grey border */
+  border-radius: 10px; /* Rounded corners for buttons */
+  padding: 15px 30px; /* Increased padding inside buttons */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect on buttons */
+.button:hover {
+  background-color: #777; /* Darker grey background on hover */
+}
+
+/* Down arrow style */
+.down-arrow {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ccc; /* Grey arrow color */
+}
+
+
+
+
+
