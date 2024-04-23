@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fantasy Trading Room</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800 text-white font-sans">
+
+<!-- Fantasy Trading Room Logo -->
+<div class="logo-container text-center py-4">
+  <img src="https://media.licdn.com/dms/image/D560BAQEz0euygDuJAg/company-logo_200_200/0/1703624929126/fantasy_trading_room_logo?e=1721260800&v=beta&t=qMFfPMqD4GLFPpYHFupybfY9zspZT_xENsiTCoU5bNU" alt="Fantasy Trading Room Logo" class="w-48 mx-auto">
+</div>
+
+<!-- Chatbot container -->
+<div class="chatbot-container max-w-md mx-auto bg-gray-700 rounded-lg shadow-lg p-6 mb-8">
+  <!-- Chat messages -->
+  <div class="chat-message bg-gray-600 text-gray-200 rounded-lg px-4 py-2 mb-4">
+    Hello! How can I assist you today?
+  </div>
+
+  <!-- User message -->
+  <div class="user-message bg-blue-500 text-white rounded-lg px-4 py-2 mb-4">
+    Hi! I need help with my order.
+  </div>
+
+  <!-- Dropdown menu for options -->
+  <div class="relative mb-4">
+    <button class="dropdown-btn bg-blue-500 text-white rounded-lg px-4 py-2" onclick="toggleDropdownMenu()">
+      &#9660; <!-- Downward arrow Unicode character -->
+    </button>
+    <div class="dropdown-menu absolute bg-gray-800 shadow-lg rounded-lg py-2 px-4 mt-2 hidden" id="dropdownMenu">
+      <a href="#" onclick="sendMessage('Where to start?')" class="block py-1 text-white">Where to start?</a>
+      <a href="#" onclick="sendMessage('How does this trading work?')" class="block py-1 text-white">How does this trading work?</a>
+      <!-- Add more options here -->
+    </div>
+  </div>
+
+  <!-- Input box for player's action/message -->
+  <input type="text" id="action" class="input-box bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 w-full focus:border-blue-500 transition duration-300 ease-in-out mb-4" placeholder="Enter your action...">
+
+  <!-- Button -->
+  <button class="button bg-blue-500 text-white rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-blue-600" onclick="sendAction()">Submit</button>
+</div>
+
+<script>
+  // Function to toggle dropdown menu visibility
+  function toggleDropdownMenu() {
+    var dropdownMenu = document.getElementById("dropdownMenu");
+    if (dropdownMenu.classList.contains("hidden")) {
+      dropdownMenu.classList.remove("hidden");
+    } else {
+      dropdownMenu.classList.add("hidden");
+    }
+  }
+
+  // Function to send selected option as a user message
+  function sendMessage(message) {
+    var userMessageDiv = document.createElement("div");
+    userMessageDiv.className = "user-message bg-blue-500 text-white rounded-lg px-4 py-2 mb-4";
+    userMessageDiv.textContent = message;
+    document.querySelector(".chatbot-container").appendChild(userMessageDiv);
+  }
+
+  // Function to handle action submission (currently placeholder)
+  function sendAction() {
+    var actionInput = document.getElementById("action").value;
+    // Placeholder action handling
+    console.log("Action submitted:", actionInput);
+  }
+</script>
+
+</body>
+</html>
